@@ -70,7 +70,7 @@ const getSampleBooks = async (pageIndex, limit) => {
     }
 
     return new Promise((resolve) => {
-        resolve(books);
+        setTimeout(() => resolve(books), 20);
     });
 
 }
@@ -78,7 +78,7 @@ const getSampleBooks = async (pageIndex, limit) => {
 const getSampleBook = async (erc) => {
 
     return new Promise((resolve) => {
-        resolve(booksMap.get(erc));
+        setTimeout(() => resolve(booksMap.get(erc)), 10);
     });
 
 }
