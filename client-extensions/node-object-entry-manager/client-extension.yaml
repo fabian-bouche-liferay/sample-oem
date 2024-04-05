@@ -1,0 +1,16 @@
+assemble:
+    - include:
+          - "**/*.js"
+          - package.json
+liferay-node-oem-oauth-application-user-agent:
+    .serviceAddress: localhost:5001
+    .serviceScheme: http
+    name: Liferay Node OEM OAuth Application User Agent
+    scopes:
+        - Liferay.Headless.Admin.Workflow.everything
+    type: oAuthApplicationUserAgent
+liferay-node-object-entry-manager:
+    name: Node Object Entry Manager
+    oAuth2ApplicationExternalReferenceCode: liferay-node-oem-oauth-application-user-agent
+    resourcePath: /book
+    type: objectEntryManager
